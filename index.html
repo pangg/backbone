@@ -6,6 +6,7 @@
 	</head>
 	
 	<body>
+		<p id="header">header</p>
 		
 		<script type="text/javascript">
 			var _obj = {
@@ -13,11 +14,34 @@
 				'description' : 'description1'
 			}
 			
+			/*
+			  backbone model类继承
+			  获取封装元素 toDoItem.get()； toDoItem.toJSON().title
+			  设置封装元素值 toDoItem.set()
+			*/
 			var ToDoItem = Backbone.Model.extend({
 				
 			});
 			
 			var toDoItem = new ToDoItem(_obj);
+			
+			/*
+			  backbone view
+			  
+			*/
+			var ToDoItemView = Backbone.View.extend({
+				/*tagName:'li',
+				className:'item-task',
+				id:'item',
+				attributes:{
+					style:"color:red;"
+				}*/
+				
+				el: '#header'
+			});
+			
+			var toDoItemView = new ToDoItemView();
+			
 		</script>
 		
 	</body>
